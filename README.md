@@ -1,5 +1,7 @@
 ### golang pre-commit hooks
 
+- intall [pre-commit](https://pre-commit.com/)
+
 #### go-fmt
 
 
@@ -21,3 +23,5 @@
     - id: go-vet
     - id: go-lint
 ```
+
+- run `pre-commit install`
