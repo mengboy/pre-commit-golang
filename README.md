@@ -3,6 +3,7 @@
 - intall [pre-commit](https://pre-commit.com/)
 
 #### go-fmt
+- go get golang.org/x/tools/cmd/goimports
 
 
 #### go-lint
