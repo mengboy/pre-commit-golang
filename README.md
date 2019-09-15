@@ -11,6 +11,8 @@
 
 #### using
 
+- create `.pre-commit-config.yaml` and add this
+
 ```
 - repo: git://github.com/mengboy/pre-commit-golang.git
   rev: master
