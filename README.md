@@ -24,4 +24,5 @@
     - id: go-lint
 ```
 
-- run `pre-commit install`
+- run `pre-commit install` to install
+- run `pre-commit autoupdate` to update 
