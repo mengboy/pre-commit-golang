@@ -8,7 +8,7 @@ if [ -z "$GOPATH" ]; then
 fi
 
 # This script does not handle file names that contain spaces.
-gofiles=$(git diff --cached --name-only --diff-filter=ACM | grep '\.go$')
+STAGED_GO_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.go$')
 
 
 if [[ "$STAGED_GO_FILES" = "" ]]; then
@@ -23,7 +23,7 @@ errors=
 
 # Run on one file at a time because a single invocation of "go tool vet"
 # with multiple files requires the files to all be in one package.
-for gofile in $gofiles
+for gofile in $STAGED_GO_FILES
 do
 
     # ignore vendor/
@@ -31,7 +31,7 @@ do
         continue
     fi
 
-	if ! go  vet $vetflags $gofile 2>&1; then
+	if ! go vet $vetflags $gofile 2>&1; then
 		errors=YES
 	fi
 done

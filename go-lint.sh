@@ -11,14 +11,19 @@ if [ -z "$(which golint)" ]; then
 fi
 
 # This script does not handle file names that contain spaces.
-gofiles=$(git diff --cached --name-only --diff-filter=ACM | grep '\.go$')
+STAGED_GO_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.go$')
+
+
+if [[ "$STAGED_GO_FILES" = "" ]]; then
+    exit 0
+fi
 
 errors=
 
 # Run on one file at a time because a single invocation of golint
 # with multiple files requires the files to all be in one package.
 gofiles_with_warnings=()
-for gofile in $gofiles
+for gofile in $STAGED_GO_FILES
 do
 
     
