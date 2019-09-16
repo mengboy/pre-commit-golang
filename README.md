@@ -2,6 +2,8 @@
 
 - intall [pre-commit](https://pre-commit.com/)
 
+- require go 1.12
+
 #### go-fmt
 -  执行` goimports `检查, 如果`goimports`没有安装, 需要执行`go get golang.org/x/tools/cmd/goimports` 进行安装
 
