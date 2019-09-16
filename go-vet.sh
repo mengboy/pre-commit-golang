@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
  
 # git go vet pre-commit hook
 

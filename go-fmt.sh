@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 STAGED_GO_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".go$")
 
