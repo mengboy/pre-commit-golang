@@ -31,7 +31,7 @@ do
         continue
     fi
 
-	if ! go tool vet $vetflags $gofile 2>&1; then
+	if ! go  vet $vetflags $gofile 2>&1; then
 		errors=YES
 	fi
 done
