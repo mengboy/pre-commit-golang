@@ -11,15 +11,18 @@
 
 
 #### go-lint
-- 进行 go-lint 检查, 需要安装golint, `go get github.com/golang/lint/golint`
+- 进行 go-lint 检查, 需要安装golint `go get github.com/golang/lint/golint`
 
 
 #### go-vet
 
 
+#### golangci-lint
+- 需要安装`go get -u github.com/golangci/golangci-lint/cmd/golangci-lint`
+
 #### using
 
-- create `.pre-commit-config.yaml` and add this
+- 创建 `.pre-commit-config.yaml` , 根据需要添加hooks
 
 ```
 - repo: git://github.com/mengboy/pre-commit-golang.git
@@ -28,7 +31,8 @@
     - id: go-fmt
     - id: go-vet
     - id: go-lint
+    - id: golangci-lint
 ```
 
-- run `pre-commit install` to install
-- run `pre-commit autoupdate` to update 
+- 执行 `pre-commit install` 安装
+- 执行 `pre-commit autoupdate` 进行更新
