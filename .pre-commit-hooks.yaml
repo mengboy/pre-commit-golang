@@ -16,3 +16,10 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `golint`, requires https://github.com/golang/lint"
+-   id: golangci-lint
+    name: 'golangci-lint'
+    entry: golangci-lint.sh
+    types: [go]
+    language: 'script'
+    pass_filenames: false
+    description: "Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint"
