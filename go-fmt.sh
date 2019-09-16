@@ -25,7 +25,9 @@ do
   # if not format, exec gofmt 
     UNFORMATTED=$(gofmt -l $FILE)
     if [[ "$UNFORMATTED" != "" ]];then
+        echo "start  format $PWD/$UNFORMATTED"
         gofmt -w $PWD/$UNFORMATTED
+        echo "$PWD/$UNFORMATTED format  succ"
         if [[ $? != 0 ]]; then
             PASS=false
         fi
